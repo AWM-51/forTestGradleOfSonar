@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name"> KilimanjaroDe雪</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">成就</string>
+    <string name="title_dashboard">聊一聊</string>
+    <string name="title_notifications">其他</string>
+    <string name="title_activity_main">乞力马扎罗</string>
+</resources>
