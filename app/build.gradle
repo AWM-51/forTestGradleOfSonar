@@ -29,6 +29,28 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.3'
-    compile'com.android.support:design:25.0.1'
-    compile'com.android.support:support-v4:25.0.1'
+    compile'com.android.support:design:26.1.0'
+    compile'com.android.support:support-v4:26.1.0'
+}
+
+apply plugin: "org.sonarqube"
+
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/"}
+    }
+    dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6"
+    }
+}
+subprojects{
+    sonarqube{
+        properties{
+            property "sonar.host.url", "http://localhost:9000/"
+            property "sonar.jdbc.url", "jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance&useSSL=false"
+            property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+            property "sonar.jdbc.username", "root"
+            property "sonar.jdbc.password", "707196"
+        }
+    }
 }
