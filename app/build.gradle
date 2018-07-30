@@ -39,24 +39,24 @@ dependencies {
 
 }
 
-//apply plugin: "org.sonarqube"
-//
-//buildscript {
-//    repositories {
-//        maven { url "https://plugins.gradle.org/m2/"}
-//    }
-//    dependencies {
-//        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6"
-//    }
-//}
-//subprojects{
-//    sonarqube{
-//        properties{
-//            property "sonar.host.url", "http://localhost:9000/"
-//            property "sonar.jdbc.url", "jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance&useSSL=false"
-//            property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
-//            property "sonar.jdbc.username", "root"
-//            property "sonar.jdbc.password", "707196"
-//        }
-//    }
-//}
+apply plugin: "org.sonarqube"
+
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/"}
+    }
+    dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6"
+    }
+}
+subprojects{
+    sonarqube{
+        properties{
+            property "sonar.host.url", "http://localhost:9000/"
+            property "sonar.jdbc.url", "jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance&useSSL=false"
+            property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+            property "sonar.jdbc.username", "root"
+            property "sonar.jdbc.password", "707196"
+        }
+    }
+}

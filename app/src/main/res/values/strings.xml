@@ -5,4 +5,6 @@
     <string name="title_dashboard">聊一聊</string>
     <string name="title_notifications">其他</string>
     <string name="title_activity_main">乞力马扎罗</string>
+    <string name="textcontext_activity_login">请输入爱之字符串</string>
+    <string name="buttontext_activity_login">请</string>
 </resources>
