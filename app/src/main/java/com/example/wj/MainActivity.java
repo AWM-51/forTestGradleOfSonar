@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    //
     private TextView mTextMessage;
     /*底部导航栏配置*/
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
